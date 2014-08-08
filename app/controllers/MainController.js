@@ -8,6 +8,7 @@ var app;
             var _this = this;
             this.search = function (username) {
                 _this.log.debug("searching for " + username);
+                _this.location.path("/user/" + username);
             };
             this.location = $location;
             this.scope = $scope;

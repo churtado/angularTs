@@ -10,8 +10,14 @@ var app;
             return new app.MainController($scope, $location, $log);
         }]);
 
-    myapp.factory("service", [function () {
-            return new app.ScaffoldService();
+    myapp.controller("userController", [
+        "$scope", "github", "$routeParams", "$log", function ($scope, github, $routeParams, $log) {
+            return new app.UserController($scope, github, $routeParams, $log);
+        }]);
+
+    myapp.factory("github", [
+        "$http", function ($http) {
+            return new app.GithubService($http);
         }]);
 
     /*app.directive("directive", [function(){
@@ -22,6 +28,9 @@ var app;
             $routeProvider.when('/main', {
                 templateUrl: 'partials/main.html',
                 controller: "mainController"
+            }).when("/user/:username", {
+                templateUrl: "partials/user.html",
+                controller: "userController"
             }).otherwise({ redirectTo: '/main' });
         }]);
 })(app || (app = {}));

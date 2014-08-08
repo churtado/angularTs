@@ -7,12 +7,13 @@
 /// <reference path='models/ScaffoldModel.ts' />
 
 //##### services #####
-/// <reference path='services/ScaffoldService.ts' />
+/// <reference path='services/GithubService.ts' />
 
 //##### directives #####
 /// <reference path='directives/ScaffoldDirective.ts' />
 
 //##### controllers #####
 /// <reference path='controllers/MainController.ts' />
+/// <reference path='controllers/UserController.ts' />
 
 /// <reference path='app.ts' />

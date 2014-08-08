@@ -25,6 +25,7 @@ module app {
 
         search = (username) => {
             this.log.debug("searching for " + username);
+            this.location.path("/user/" + username);
         }
     }
 
