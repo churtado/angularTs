@@ -15,9 +15,14 @@ var app;
             return new app.UserController($scope, github, $routeParams, $log);
         }]);
 
+    myapp.controller("repoController", [
+        "$scope", "github", "$routeParams", "$log", function ($scope, github, $routeParams, $log) {
+            return new app.RepoController($scope, github, $routeParams, $log);
+        }]);
+
     myapp.factory("github", [
-        "$http", function ($http) {
-            return new app.GithubService($http);
+        "$http", "$log", function ($http, $log) {
+            return new app.GithubService($http, $log);
         }]);
 
     /*app.directive("directive", [function(){
@@ -31,6 +36,9 @@ var app;
             }).when("/user/:username", {
                 templateUrl: "partials/user.html",
                 controller: "userController"
+            }).when("/repo/:username/:reponame", {
+                templateUrl: "partials/repo.html",
+                controller: "repoController"
             }).otherwise({ redirectTo: '/main' });
         }]);
 })(app || (app = {}));

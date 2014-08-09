@@ -13,8 +13,12 @@ module app {
         return new app.UserController($scope, github, $routeParams, $log);
     }]);
 
-    myapp.factory("github", ["$http", function ($http:ng.IHttpService) {
-            return new app.GithubService($http);
+    myapp.controller("repoController", ["$scope","github","$routeParams", "$log", function ($scope:IRepoScope, github:IGithubService, $routeParams:IRepoRouteParamsService, $log:ng.ILogService) {
+        return new app.RepoController($scope, github, $routeParams, $log);
+    }]);
+
+    myapp.factory("github", ["$http", "$log", function ($http:ng.IHttpService, $log:ng.ILogService) {
+            return new app.GithubService($http, $log);
         }]);
 
     /*app.directive("directive", [function(){
@@ -31,10 +35,10 @@ module app {
                 templateUrl: "partials/user.html",
                 controller: "userController"
             })
-            /*.when("/repo/:username/:reponame", {
+            .when("/repo/:username/:reponame", {
                 templateUrl: "partials/repo.html",
-                controller: "RepoController"
-            })*/
+                controller: "repoController"
+            })
 
             .otherwise({redirectTo: '/main'})
   	}])

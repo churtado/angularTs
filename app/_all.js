@@ -11,5 +11,6 @@
 //##### controllers #####
 /// <reference path='controllers/MainController.ts' />
 /// <reference path='controllers/UserController.ts' />
+/// <reference path='controllers/RepoController.ts' />
 /// <reference path='app.ts' />
 //# sourceMappingURL=_all.js.map
