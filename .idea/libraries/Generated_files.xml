@@ -1,0 +1,31 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/app/_all.js" />
+        <item url="file://$PROJECT_DIR$/app/directives/ScaffoldDirective.js" />
+        <item url="file://$PROJECT_DIR$/bower_components/dt-angular-ui-bootstrap/angular-ui-bootstrap-tests.js" />
+        <item url="file://$PROJECT_DIR$/app/controllers/RepoController.js" />
+        <item url="file://$PROJECT_DIR$/app/services/GithubService.js" />
+        <item url="file://$PROJECT_DIR$/app/controllers/MainController.js" />
+        <item url="file://$PROJECT_DIR$/app/controllers/UserController.js" />
+        <item url="file://$PROJECT_DIR$/app/models/ScaffoldModel.js" />
+        <item url="file://$PROJECT_DIR$/app/controllers/PrometricController.js" />
+        <item url="file://$PROJECT_DIR$/app/app.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/_all.js" />
+      <root url="file://$PROJECT_DIR$/app/directives/ScaffoldDirective.js" />
+      <root url="file://$PROJECT_DIR$/app/controllers/RepoController.js" />
+      <root url="file://$PROJECT_DIR$/bower_components/dt-angular-ui-bootstrap/angular-ui-bootstrap-tests.js" />
+      <root url="file://$PROJECT_DIR$/app/services/GithubService.js" />
+      <root url="file://$PROJECT_DIR$/app/controllers/MainController.js" />
+      <root url="file://$PROJECT_DIR$/app/controllers/UserController.js" />
+      <root url="file://$PROJECT_DIR$/app/models/Promotion.js" />
+      <root url="file://$PROJECT_DIR$/app/app.js" />
+      <root url="file://$PROJECT_DIR$/app/controllers/PrometricController.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

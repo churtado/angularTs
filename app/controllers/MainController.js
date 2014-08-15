@@ -7,13 +7,11 @@ var app;
         function MainController($scope, $location, $log) {
             var _this = this;
             this.search = function (username) {
-                _this.log.debug("searching for " + username);
                 _this.location.path("/user/" + username);
             };
             this.location = $location;
             this.scope = $scope;
             this.log = $log;
-            this.log.debug("instance created");
             this.scope.username = "angular";
             this.scope.search = this.search;
         }

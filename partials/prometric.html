@@ -1,0 +1,44 @@
+<form name="newPromotion" novalidate>
+    <div class="well">
+        <h3>New promotion</h3>
+        <div class="form-group">
+            <label>Description</label>
+            <input class="form-control" ng-model="promotion.description" required/>
+        </div>
+
+        <div>
+            <label>Date from</label>
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="input-group">
+                        <input type="text" class="form-control" datepicker-popup="{{calendar.format}}" ng-model="promotion.dateFrom" is-open="calendar.opened" min-date="calendar.minDate" max-date="'2015-06-22'" datepicker-options="calendar.dateOptions" date-disabled="calendar.disabled(date, mode)" ng-required="true" close-text="Close" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="calendar.open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            <label>Number of cases</label>
+            <input type="number" class="form-control" ng-model="promotion.casesAmount" required />
+        </div>
+
+        <div class="form-group">
+            <label>Revenue per case</label>
+            <input type="number" class="form-control" ng-model="promotion.revenuePerCase" required />
+        </div>
+
+        <div class="form-group">
+            <label>Total Revenue:</label>
+            <label>{{getRevenue()}}</label>
+        </div>
+
+        <label>Mechanic:</label><select class="form-control" ng-model="promotion.mechanic" ng-options="mechanic.mechanic for mechanic in mechanics"></select><br>
+        <label>Support level:</label><select class="form-control" ng-model="promotion.supportLevel" ng-options="supportLevel.supportLevel for supportLevel in supportLevels"></select><br>
+
+    </div>
+
+</form>

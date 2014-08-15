@@ -1,9 +1,9 @@
 //#####  include type definitions #####
-/// <reference path='typings/jquery/jquery.d.ts' />
-/// <reference path='typings/angularjs/angular.d.ts' />
-/// <reference path='typings/angularjs/angular-route.d.ts' />
+/// <reference path='../bower_components/dt-jquery/jquery.d.ts' />
+/// <reference path='../bower_components/dt-angular/angular.d.ts' />
+/// <reference path='../bower_components/dt-angular/angular-route.d.ts' />
 //##### models #####
-/// <reference path='models/ScaffoldModel.ts' />
+/// <reference path='models/Promotion.ts' />
 //##### services #####
 /// <reference path='services/GithubService.ts' />
 //##### directives #####
@@ -12,5 +12,6 @@
 /// <reference path='controllers/MainController.ts' />
 /// <reference path='controllers/UserController.ts' />
 /// <reference path='controllers/RepoController.ts' />
+/// <reference path='controllers/PrometricController.ts' />
 /// <reference path='app.ts' />
 //# sourceMappingURL=_all.js.map

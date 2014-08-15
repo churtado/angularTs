@@ -3,7 +3,7 @@ var app;
 (function (app) {
     'use strict';
 
-    var myapp = angular.module('app', ['ngRoute']);
+    var myapp = angular.module('app', ['ngRoute', 'ui.bootstrap']);
 
     myapp.controller("mainController", [
         "$scope", "$location", "$log", function ($scope, $location, $log) {
@@ -20,6 +20,11 @@ var app;
             return new app.RepoController($scope, github, $routeParams, $log);
         }]);
 
+    myapp.controller("prometricController", [
+        "$scope", "$http", "$log", function ($scope, $http, $log) {
+            return new app.PrometricController($scope, $http, $log);
+        }]);
+
     myapp.factory("github", [
         "$http", "$log", function ($http, $log) {
             return new app.GithubService($http, $log);
@@ -32,14 +37,17 @@ var app;
         '$routeProvider', function ($routeProvider) {
             $routeProvider.when('/main', {
                 templateUrl: 'partials/main.html',
-                controller: "mainController"
+                controller: "mainController "
             }).when("/user/:username", {
                 templateUrl: "partials/user.html",
                 controller: "userController"
             }).when("/repo/:username/:reponame", {
                 templateUrl: "partials/repo.html",
                 controller: "repoController"
-            }).otherwise({ redirectTo: '/main' });
+            }).when("/prometric", {
+                templateUrl: "partials/prometric.html",
+                controller: "prometricController"
+            }).otherwise({ redirectTo: '/prometric' });
         }]);
 })(app || (app = {}));
 //# sourceMappingURL=app.js.map

@@ -3,7 +3,7 @@
 module app {
     'use strict'
 
-    var myapp: ng.IModule = angular.module('app', ['ngRoute'])
+    var myapp: ng.IModule = angular.module('app', ['ngRoute','ui.bootstrap']);
 
     myapp.controller("mainController", ["$scope","$location","$log", function ($scope:IMainScope, $location:ng.ILocationService, $log:ng.ILogService) {
             return new app.MainController($scope, $location, $log);
@@ -15,6 +15,10 @@ module app {
 
     myapp.controller("repoController", ["$scope","github","$routeParams", "$log", function ($scope:IRepoScope, github:IGithubService, $routeParams:IRepoRouteParamsService, $log:ng.ILogService) {
         return new app.RepoController($scope, github, $routeParams, $log);
+    }]);
+
+    myapp.controller("prometricController", ["$scope", "$http", "$log", function ($scope:IPrometricScope, $http:ng.IHttpService, $log:ng.ILogService) {
+        return new app.PrometricController($scope, $http, $log);
     }]);
 
     myapp.factory("github", ["$http", "$log", function ($http:ng.IHttpService, $log:ng.ILogService) {
@@ -29,7 +33,7 @@ module app {
 		$routeProvider
             .when('/main', {
                 templateUrl: 'partials/main.html',
-                controller: "mainController"
+                controller: "mainController "
             })
             .when("/user/:username", {
                 templateUrl: "partials/user.html",
@@ -39,7 +43,11 @@ module app {
                 templateUrl: "partials/repo.html",
                 controller: "repoController"
             })
+            .when("/prometric", {
+                templateUrl: "partials/prometric.html",
+                controller: "prometricController"
+            })
 
-            .otherwise({redirectTo: '/main'})
+            .otherwise({redirectTo: '/prometric'})
   	}])
 }

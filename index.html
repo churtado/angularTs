@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app" data-framework="typescript">
   <head>
+      <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+      <link href="bower_components/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet" />
       <title>Angular/Typescript</title>
   </head>
 
   <body>
 
-    <h1>Github Viewer</h1>
+  <div class="navbar navbar-inverse">
+      <a class="navbar-brand" href="#">Prometric Demo</a>
+  </div>
 
     <div ng-view></div>
 
-    <script src="app/lib/angular/angular.js"></script>
-    <script src="app/lib/angular-route/angular-route.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angularjs/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
     <script src="app/app.js"></script>
     <script src="app/controllers/MainController.js"></script>
     <script src="app/controllers/UserController.js"></script>
     <script src="app/controllers/RepoController.js"></script>
+    <script src="app/controllers/PrometricController.js"></script>
     <script src="app/services/GithubService.js"></script>
+
   </body>
 </html>

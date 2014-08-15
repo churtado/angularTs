@@ -18,13 +18,11 @@ module app {
             this.location = $location;
             this.scope = $scope;
             this.log = $log;
-            this.log.debug("instance created");
             this.scope.username = "angular";
             this.scope.search = this.search;
         }
 
         search = (username) => {
-            this.log.debug("searching for " + username);
             this.location.path("/user/" + username);
         }
     }
